@@ -1,62 +1,48 @@
 Project Title: Universal Python Calculator
 
-This project is a growing Python calculator.
+This project now uses a cleaner real-world GUI layout with separated standard and advanced controls, stronger number visibility, and a more professional scientific-calculator style.
 
-Version 2.0
-The current version keeps the codebase cleaner with supporting real calculator-style input.
+Version 3.0
+The current version improves the UI into a more production-style desktop calculator with split panels, mode buttons, and scrollable advanced tools.
 
 Current Features:
-1. Real calculator style input:
+1. Professional desktop GUI using Tkinter.
+2. Large, high-contrast display for expressions and results.
+3. Bigger number buttons for easier everyday use.
+4. Split layout:
+   * Standard panel for normal calculations
+   * Advanced panel for scientific and memory tools
+   * Separate history panel
+5. DEG and RAD mode as real clickable buttons.
+6. Scrollable advanced tools area.
+7. Scrollable history list.
+8. Memory controls:
+   * `MC`
+   * `MR`
+   * `M+`
+   * `M-`
+9. Real calculator-style direct expressions such as:
    * `2 + 3 * 4`
    * `sqrt(81)`
-   * `sin(pi / 2)`
-   * `15 % 4`
-   * `ans * 2`
-2. Supported operators:
-   * Addition `+`
-   * Subtraction `-`
-   * Multiplication `*`
-   * Division `/`
-   * Modulus `%`
-   * Power `^`
-3. Supported functions:
-   * `sqrt`
-   * `sin`, `cos`, `tan`
-   * `asin`, `acos`, `atan`
-   * `log`, `log10`
-   * `abs`
-   * `round`
-   * `fact` and `factorial`
-4. Supported constants:
-   * `pi`
-   * `e`
-   * `ans` for the last result
-5. Friendly commands:
-   * `help`
-   * `history`
-   * `clear`
-   * `clear history`
-   * `exit`
-6. Clean terminal output with a simple calculator prompt.
-7. Safe expression evaluation with validation.
-8. Calculation history tracking.
+   * `sin(90)` in DEG mode
+   * `sin(pi / 2)` in RAD mode
+   * `mem + 5`
+10. Scientific functions available from the side panel.
+11. Reusable history selection.
+12. Cleaner status feedback and easier interaction.
 
-Code Quality Improvements:
-1. Reduced the architecture to a simple app layer and engine layer.
-2. Kept the entry point very small.
-3. Used plain functions instead of heavier class-based structure.
-4. Kept math support centralized in one engine file.
-5. Made it easy to add future functions and constants in one place.
-
-Suggested Project Structure:
+Code Structure:
 1. `basic_operation.py` - entry point
-2. `calculator/app.py` - user interaction and commands
-3. `calculator/engine.py` - math functions, constants, and safe evaluation
+2. `calculator/app.py` - GUI application
+3. `calculator/engine.py` - safe math engine
 
-Planned Next Steps:
-1. Add degree and radian mode switching.
-2. Add memory features like `M+`, `M-`, and memory recall.
-3. Add unit conversion mode.
-4. Add financial mode.
-5. Add automated tests.
-6. Build a GUI version later.
+Why this version is better:
+1. Easier to use like a standard and scientific calculator together.
+2. Cleaner visual separation between normal and advanced actions.
+3. Better suited for future upgrades like tabs, themes, and converter mode.
+
+Suggested Next Steps:
+1. Add keyboard shortcuts for memory actions.
+2. Add copy result and save history options.
+3. Add tabs for Standard, Scientific, and Converter modes.
+4. Add theme switching with light and dark professional skins.
