@@ -1,51 +1,62 @@
 Project Title: Universal Python Calculator
 
-This project is a growing Python calculator designed to start simple and gradually expand into a more complete universal calculator.
+This project is a growing Python calculator.
 
-Version 1.1
-The current version improves the original basic calculator with better structure, more operations, safer input handling, and history tracking.
+Version 2.0
+The current version keeps the codebase cleaner with supporting real calculator-style input.
 
 Current Features:
-1. Interactive startup with `start` and `exit` commands.
-2. Continuous calculator loop so users can perform multiple calculations in one run.
-3. Basic arithmetic operations:
-   * Addition
-   * Subtraction
-   * Multiplication
-   * Division
-4. Extra operations:
-   * Power
-   * Modulus
-   * Percentage
-   * Square root
-5. Input validation for invalid menu choices and non-numeric values.
-6. Safe handling for division by zero and modulus by zero.
-7. Calculation history display.
+1. Real calculator style input:
+   * `2 + 3 * 4`
+   * `sqrt(81)`
+   * `sin(pi / 2)`
+   * `15 % 4`
+   * `ans * 2`
+2. Supported operators:
+   * Addition `+`
+   * Subtraction `-`
+   * Multiplication `*`
+   * Division `/`
+   * Modulus `%`
+   * Power `^`
+3. Supported functions:
+   * `sqrt`
+   * `sin`, `cos`, `tan`
+   * `asin`, `acos`, `atan`
+   * `log`, `log10`
+   * `abs`
+   * `round`
+   * `fact` and `factorial`
+4. Supported constants:
+   * `pi`
+   * `e`
+   * `ans` for the last result
+5. Friendly commands:
+   * `help`
+   * `history`
+   * `clear`
+   * `clear history`
+   * `exit`
+6. Clean terminal output with a simple calculator prompt.
+7. Safe expression evaluation with validation.
+8. Calculation history tracking.
+
+Code Quality Improvements:
+1. Reduced the architecture to a simple app layer and engine layer.
+2. Kept the entry point very small.
+3. Used plain functions instead of heavier class-based structure.
+4. Kept math support centralized in one engine file.
+5. Made it easy to add future functions and constants in one place.
+
+Suggested Project Structure:
+1. `basic_operation.py` - entry point
+2. `calculator/app.py` - user interaction and commands
+3. `calculator/engine.py` - math functions, constants, and safe evaluation
 
 Planned Next Steps:
-1. Move operations into separate modules.
-2. Add scientific functions such as trigonometry and logarithms.
-3. Support direct expression input like `2 + 3 * 4`.
-4. Add unit conversion mode.
-5. Add tests for calculator operations.
+1. Add degree and radian mode switching.
+2. Add memory features like `M+`, `M-`, and memory recall.
+3. Add unit conversion mode.
+4. Add financial mode.
+5. Add automated tests.
 6. Build a GUI version later.
-
-Vision for the Universal Python Calculator:
-1. Scientific calculations
-   * Trigonometric functions
-   * Logarithms
-   * Factorials
-   * Constants like pi and e
-2. Statistical tools
-   * Mean, median, mode
-   * Standard deviation and variance
-3. Programmer mode
-   * Binary, octal, and hexadecimal support
-4. Conversion tools
-   * Length, weight, temperature, and currency
-5. Financial tools
-   * Interest, loan, and investment calculations
-6. Interface upgrades
-   * GUI
-   * Theme support
-   * Better navigation
